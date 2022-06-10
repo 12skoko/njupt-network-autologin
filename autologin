@@ -1,0 +1,18 @@
+#ping不通阿里dns就运行
+:if ([/ping 223.5.5.5 count=3]=0) do={\
+    
+#更改网卡名字ether1
+    :local ipaddr [/ip address get [/ip address find interface=ether1] address]
+    :set ipaddr [:pick $ipaddr 0 ([len $ipaddr] -3)]
+    
+#更改用户名和密码，电信用@njxy结尾，移动用@cmcc结尾，如用户名"Bxxxxxxxx@njxy"
+    :local username ""
+    :local password ""
+    
+    :local url ("http://10.10.244.11:801/eportal/?c=ACSetting&a=Login&protocol=http:&hostname=10.10.244.11&iTermType=1&wlanuserip=".$ipaddr."&wlanacip=10.255.252.150&wlanacname=XL-BRAS-SR8806-X&mac=00-00-00-00-00-00&ip=".$ipaddr."&enAdvert=0&queryACIP=0&loginMethod=1")
+    
+    :local data ("DDDDD=,0,".$username."&upass=".$password."&R1=0&R2=0&R3=0&R6=0&para=00&0MKKey=123456&buttonClicked=&redirect_url=&err_flag=&username=&password=&user=&cmd=&Login=&v6ip=")
+    
+    /tool fetch url=$url http-data=$data
+
+}
