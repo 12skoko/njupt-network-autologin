@@ -1,6 +1,8 @@
 # njupt-network-autologin
 Ros路由器南邮校园网自动登录脚本
 
+![0.png](https://s2.loli.net/2022/06/10/hoWZTq9DeKG8Yp4.png)
+
 将脚本添加进schedule中自动运行，每分钟执行一次
 
 ![1.png](https://s2.loli.net/2022/06/10/jGmYluOhpDeUqCv.png)
