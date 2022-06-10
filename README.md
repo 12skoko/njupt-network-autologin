@@ -10,3 +10,5 @@ Ros路由器南邮校园网自动登录脚本
 ![2.png](https://s2.loli.net/2022/06/10/s8KaBOq53rcIfZw.png)
 
 ![3.png](https://s2.loli.net/2022/06/10/qxDjZytb4MYNimH.png)
+
+![4.png](https://s2.loli.net/2022/06/10/Qc8aMvxFkGj45sJ.png)
